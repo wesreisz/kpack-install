@@ -1,0 +1,38 @@
+---
+registry:
+  server: https://harbor.wesleyreisz.com
+  username: tap-ga
+  password: N0Password01
+
+image_prefix: kpack/demo-
+
+kpack:
+  # credentials for the container registry you'll be using to store images
+  builder:
+    # path to the container repository where kpack build artifacts are stored
+    tag: kpack/builder
+  # A comma-separated list of languages e.g. [java,nodejs] that will be supported for development
+  # Allowed values are:
+  # - java
+  # - nodejs
+  # - dotnet-core
+  # - go
+  # - ruby
+  # - php
+  languages: [java, dotnet-core]
+
+vendir:
+  # For installation of CLI binaries
+  host:
+    # os: darwin, linux, windows
+    os: "darwin"
+    # arch: amd64, arm64
+    arch: "amd64"
+  # getLatest overrides declared versions (disable using getLatest: "")
+  getLatest: ""
+  versions:
+    cert-manager: 1.5.3
+    kp: 0.4.2
+    kpack: 0.5.0
+    secretgen-controller: 0.6.0
+    yq: 4.16.1
