@@ -25,26 +25,6 @@ kind: Config
 minimumRequiredVersion: 0.8.0
 directories:
   #! Product release files
-  - path: vendir/cert-manager
-    contents:
-    - path: .
-      githubRelease:
-        slug: jetstack/cert-manager
-        tagSelection:
-          semver:
-            constraints: #@ getVersion("cert-manager")
-        assetNames: [ "cert-manager.yaml" ]
-        disableAutoChecksumValidation: true
-  - path: vendir/secretgen-controller
-    contents:
-    - path: .
-      githubRelease:
-        slug: vmware-tanzu/carvel-secretgen-controller
-        tagSelection:
-          semver:
-            constraints: #@ getVersion("secretgen-controller")
-        assetNames: ["release.yml"]
-        disableAutoChecksumValidation: true
   - path: vendir/kpack
     contents:
     - path: .

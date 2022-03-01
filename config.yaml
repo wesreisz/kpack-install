@@ -31,8 +31,6 @@ vendir:
   # getLatest overrides declared versions (disable using getLatest: "")
   getLatest: ""
   versions:
-    cert-manager: 1.5.3
     kp: 0.4.2
     kpack: 0.5.0
-    secretgen-controller: 0.6.0
     yq: 4.16.1

@@ -9,12 +9,34 @@ vendir.exe: https://github.com/vmware-tanzu/carvel-vendir/releases/download/v0.2
 
 ```
 kapp version
-> kapp version 0.45.0
-
 ytt version
-> ytt version 0.38.0
 
 vendir version
 ```
 
 Execute `download-dependencies.sh` to pull down the binaries and files you need.
+
+Check `kp` and `yq` versions.
+```
+kp version
+yq --version
+```
+
+Install kpack by executing `install-kpack.sh`
+
+Check builder, clusterstore, and  clusterstore
+```
+kp builder list
+kp clusterstore list
+kp clusterstack list
+```
+
+Create image for build
+```
+kubectl apply -f  image-weatherforecast-service-api.yaml
+```
+
+Watch the logs
+```
+kp build logs weatherforecast-service-api
+```
