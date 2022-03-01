@@ -10,7 +10,7 @@ kpack:
   # credentials for the container registry you'll be using to store images
   builder:
     # path to the container repository where kpack build artifacts are stored
-    tag: kpack/builder
+    tag: harbor.wesleyreisz.com/kpack/builder
   # A comma-separated list of languages e.g. [java,nodejs] that will be supported for development
   # Allowed values are:
   # - java
@@ -19,7 +19,7 @@ kpack:
   # - go
   # - ruby
   # - php
-  languages: [java, dotnet-core]
+  languages: [java, dotnet-core, nodejs]
 
 vendir:
   # For installation of CLI binaries
