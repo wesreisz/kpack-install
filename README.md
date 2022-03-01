@@ -58,7 +58,8 @@ Apply it
 kubectl apply -f  image-weatherforecast-service-api.yaml
 ```
 
-Watch the logs
+Watch the images and logs
 ```
+kp image list
 kp build logs weatherforecast-service-api
 ```
