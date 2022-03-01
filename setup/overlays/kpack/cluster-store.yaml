@@ -15,7 +15,9 @@ metadata:
   name: default
 spec:
   sources:
-#@ for language in data.values.kpack.languages:
-  - image: #@ "gcr.io/paketo-buildpacks/{}:{}".format(language,buildpack_versions[language])
-#@ end
+  - image: gcr.io/paketo-buildpacks/java
+  - image: gcr.io/paketo-buildpacks/nodejs
+  - image: gcr.io/paketo-buildpacks/dotnet-core
+  - image: gcr.io/paketo-buildpacks/dotnet-core-aspnet
+  - image: gcr.io/paketo-buildpacks/dotnet-publish
 

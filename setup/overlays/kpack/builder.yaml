@@ -15,7 +15,13 @@ spec:
     name: default
     kind: ClusterStore
   order:
-#@ for language in data.values.kpack.languages:
   - group:
-    - id: #@ "paketo-buildpacks/{}".format(language)
-#@ end
+    - id: paketo-buildpacks/java
+  - group:
+    - id: paketo-buildpacks/nodejs
+  - group:
+    - id: paketo-buildpacks/dotnet-core 
+  - group:
+    - id: paketo-buildpacks/dotnet-core-aspnet
+  - group:
+    - id: paketo-buildpacks/dotnet-publish

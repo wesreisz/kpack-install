@@ -33,6 +33,28 @@ kp clusterstack list
 
 Create image for build
 ```
+apiVersion: kpack.io/v1alpha2
+kind: Image
+metadata:
+  name: weatherforecast-service-api
+  namespace: default
+spec:
+  tag: harbor.wesleyreisz.com/kpack/weatherforecast-service-api-1
+  #additionalTags:
+  #- harbor.wesleyreisz.com/rrsc/spring-petclinic:nightly
+  serviceAccountName: kpack-service-account
+  builder:
+    name: builder
+    kind: Builder
+  source:
+    git:
+      url: https://bitbucket.org/wesreisz/weatherforecast-kpack.git
+      revision: main
+    subPath: src/weatherforecast-service/
+```
+
+Apply it
+```
 kubectl apply -f  image-weatherforecast-service-api.yaml
 ```
 
