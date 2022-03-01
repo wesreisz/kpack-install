@@ -15,6 +15,6 @@ ytt version
 > ytt version 0.38.0
 
 vendir version
-> vendir version 0.23.0
-
 ```
+
+Execute `download-dependencies.sh` to pull down the binaries and files you need.
