@@ -20,6 +20,7 @@ Check `kp` and `yq` versions. They're installed as part of the dependencies.
 kp version
 yq --version
 ```
+Update the REDACTED pieces in config.yaml (the uid/pass for your harbor repo).
 
 Install kpack by executing `install-kpack.sh` This will install two pods into your cluster (make sure your ./kube/config is pointing to the right cluster and your authenticated if needed before running). It will also configure the clusterstack (OS), clusterstore (buildpacks), and a namespaced builder in the default namespace. You can use the same approach to do a clusterbuilder if you want it to be cluster scoped.
 
