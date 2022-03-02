@@ -13,7 +13,7 @@ ytt version
 vendir version
 ```
 
-Execute `./download-dependencies.sh` to pull down the binaries and files you need. It will add them to your path. If you don't have kubectl installed, you will need to do that too. It's skipped here under the assumption you already have it installed.
+Execute `./download-dependencies.sh` to pull down the binaries and files you need. It will add them to your path. If you don't have kubectl installed, you will need to do that too. It's skipped here under the assumption you already have it installed. Also highly recommend creating a developer api key on github and adding it to the file or you'll likely be rate limited.
 
 Check `kp` and `yq` versions. They're installed as part of the dependencies.
 ```
